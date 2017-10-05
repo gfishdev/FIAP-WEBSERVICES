@@ -1,11 +1,5 @@
 package br.com.fiap.client;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement(name="aluno")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Aluno {
 	public String nome;
 	public String turma;

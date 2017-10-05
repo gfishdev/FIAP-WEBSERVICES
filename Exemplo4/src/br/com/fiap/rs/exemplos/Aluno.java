@@ -1,8 +1,5 @@
 package br.com.fiap.rs.exemplos;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
 public class Aluno {
 	private String nome;
 	private String turma;

@@ -35,21 +35,21 @@ public class AlunoWeb {
 	}
 	
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public List<Aluno> getAlunos() {
 		return alunos;
 	}
 	
 	@Path("{indice}")
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Aluno getAluno(@PathParam("indice") int indice) {
 		return alunos.get(indice);
 	}
 	
 	@POST
-	@Consumes(MediaType.APPLICATION_XML)
-	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Retorno novo(Aluno a) {
 		alunos.add(a);
 		Retorno r = new Retorno();
@@ -58,8 +58,8 @@ public class AlunoWeb {
 	}
 	
 	@PUT
-	@Consumes(MediaType.APPLICATION_XML)
-	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{indice}")
 	public Retorno alterar(Aluno a, @PathParam("indice") int indice) {
 		alunos.set(indice, a);
@@ -67,7 +67,7 @@ public class AlunoWeb {
 	}
 	
 	@DELETE
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{indice}")
 	public Retorno excluir(@PathParam("indice") int indice) {
 		alunos.remove(indice);
