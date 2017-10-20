@@ -6,3 +6,6 @@ wsgen -s . -classpath . br.com.fiap.exemplo.ws.HelloWeb
 
 ### Para importar as classes do Web Service ###
 wsimport -keep -p br.com.fiap.exemplo.ws.client http://localhost:8080/hello?wsdl
+
+### Gerar Certificado digital ###
+keytool -genkey -keyalg RSA -keystore minhachave.jks -alias guilherme
